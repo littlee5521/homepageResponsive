@@ -1,0 +1,43 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  height: fit-content;
+  padding: 50px 0;
+  background: linear-gradient(to right bottom, black 50%, transparent 50%);
+  justify-content: center;
+}
+
+.profile {
+  max-height: fit-content;
+  max-width: fit-content;
+  display: grid;
+  justify-self: right;
+}
+.profile-photo {
+  max-height: 600px;
+  width: auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+.profile-name {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: last baseline;
+  justify-self: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.about_me {
+  padding: 50px 0;
+  justify-content: left;
+  color: wheat;
+}
+@media screen and (max-width: 639px) {
+  .profile {
+    justify-self: center;
+    background: linear-gradient(to right bottom, black 50%, transparent 50%);
+  }
+  .about_me {
+    text-align: center;
+  }
+}
