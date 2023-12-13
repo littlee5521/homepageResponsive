@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
 .header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -7,19 +11,19 @@
   justify-content: center;
 }
 
-.profile {
+.header__profile {
   max-height: fit-content;
   max-width: fit-content;
   display: grid;
   justify-self: right;
 }
-.profile-photo {
+.header__profile__photo {
   max-height: 600px;
   width: auto;
   grid-column: 1;
   grid-row: 1;
 }
-.profile-name {
+.header__profile__name {
   grid-column: 1;
   grid-row: 1;
   align-self: last baseline;
@@ -27,7 +31,7 @@
   color: white;
   margin-bottom: 20px;
 }
-.about_me {
+.header__about_me {
   padding: 50px 0;
   justify-content: left;
   color: wheat;
