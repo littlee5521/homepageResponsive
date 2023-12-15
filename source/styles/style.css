@@ -1,3 +1,9 @@
+.header_text {
+  font-size: clamp(2.5rem, 3vw, 4rem);
+}
+.body_text {
+  font-size: clamp(2rem, 1.5vw, 3rem);
+}
 /*------------------------------------*\
   #HEADER
 \*------------------------------------*/
@@ -6,8 +12,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   height: fit-content;
-  padding: 50px 0;
-  background: linear-gradient(to right bottom, black 50%, transparent 50%);
+  padding-top: 50px;
+  padding-right: 20px;
+  background: linear-gradient(to right bottom, #0d0d0d 50%, transparent 50%);
   justify-content: center;
 }
 
@@ -18,11 +25,15 @@
   justify-self: right;
 }
 .header__profile__photo {
-  max-height: 600px;
-  width: auto;
+  max-height: auto;
+  width: 350px;
   grid-column: 1;
   grid-row: 1;
 }
+
+.header__profile__name__wrapper {
+}
+
 .header__profile__name {
   grid-column: 1;
   grid-row: 1;
@@ -30,18 +41,64 @@
   justify-self: center;
   color: white;
   margin-bottom: 20px;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 .header__about_me {
   padding: 50px 0;
+  padding-left: 20px;
   justify-content: left;
-  color: wheat;
+  color: black;
+  display: grid;
+  background-color: white;
+  box-shadow: 10px 3px 3px #888888;
+  max-width: 1100px;
+  justify-self: first baseline;
 }
-@media screen and (max-width: 639px) {
-  .profile {
+.header__about_me__title__wrapper {
+}
+.header__about_me__title {
+}
+.header__about_me__body__wrapper {
+}
+.header__about_me__body {
+}
+
+.header__about_me__button_wrapper {
+  display: grid;
+  grid-template-columns: 20px 20px 20px;
+  align-items: last baseline;
+  justify-content: end;
+  padding-right: 40px;
+  gap: 40px;
+}
+
+.header__about_me__button {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: none;
+  box-shadow: 10px 6px 6px #888888;
+  border-radius: 40%;
+}
+.header__about_me__button__image {
+  height: 100%;
+  width: auto;
+  border-radius: 40%;
+}
+.header__about_me__button:active {
+  box-shadow: inset 10px 6px 6px #888888;
+}
+@media screen and (max-width: 705px) {
+  .header__profile {
     justify-self: center;
-    background: linear-gradient(to right bottom, black 50%, transparent 50%);
   }
-  .about_me {
+  .header__about_me {
     text-align: center;
+  }
+  .header__about_me {
+    box-shadow: none;
+  }
+  .header__about_me__button_wrapper {
+    justify-content: center;
   }
 }
